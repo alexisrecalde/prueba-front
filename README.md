@@ -3,6 +3,8 @@
 ## Descripción
 Aplicación frontend de e-commerce construida con React, TypeScript y Material-UI.
 
+Para que funcione el back, a veces es necesario volver hacer un deploy desde render, ya que el servicio gratiuto parece que pausa la app despues de un corto tiempo de inactividad
+
 ## Requisitos Previos
 - Node.js (v18 o superior)
 - npm
