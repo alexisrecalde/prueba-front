@@ -1,46 +1,56 @@
-# React + TypeScript + Vite
+# E-Commerce Frontend
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
+Aplicación frontend de e-commerce construida con React, TypeScript y Material-UI.
 
-Currently, two official plugins are available:
+## Requisitos Previos
+- Node.js (v18 o superior)
+- npm
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## Instalación
 
-## Expanding the ESLint configuration
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default tseslint.config({
-  languageOptions: {
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+1. Instalar dependencias
+```bash
+npm install
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
-
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
-
-export default tseslint.config({
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    react,
-  },
-  rules: {
-
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+2. Configurar variables de entorno
+Crear un archivo `.env` en la raíz del proyecto con:
 ```
+VITE_API_URL=http://localhost:5000/api
+```
+
+## Scripts
+
+- `npm run dev`: Iniciar servidor de desarrollo
+- `npm run build`: Compilar para producción
+- `npm run preview`: Previsualizar build de producción
+
+## Estructura del Proyecto
+```
+src/
+├── components/      # Componentes reutilizables
+├── contexts/        # Contextos de React
+├── hooks/           # Hooks personalizados
+├── pages/           # Páginas de la aplicación
+├── services/        # Servicios de API
+├── types/           # Definiciones de tipos
+└── utils/           # Utilidades
+```
+
+## Mejoras Pendientes
+
+### Funcionalidades
+- [ ] Implementar carrito de compras completo
+- [ ] Añadir sistema de búsqueda avanzada
+- [ ] Crear dashboard de usuario
+
+### Rendimiento y UX
+- [ ] Añadir transiciones y animaciones
+- [ ] Mejorar manejo de estados de carga
+- [ ] Mejorar experiencia de usuario en los distintos tipos de mensajes
+
+
+## Licencia
+Distribuido bajo la licencia MIT.
